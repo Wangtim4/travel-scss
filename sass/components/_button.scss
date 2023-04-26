@@ -1,0 +1,62 @@
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+
+    // 按鈕效果2-2懸停+放大
+    position: relative;
+
+
+    // 按鈕效果1-懸停+陰影
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+
+        // 按鈕效果2-4-懸停時
+        &::after {
+            transform: scale(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 1rem 1rem rgba($color-black, .2);
+    }
+
+    // 按鈕效果2-1懸停+放大
+    &::after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+
+
+    &-white {
+        background-color: $color-white;
+        color: $color-gray;
+
+        // 按鈕效果2-3-懸停+放大
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &-animated {
+        animation: moveInBtn .5s ease-out .75s;
+
+        // backwards 在沒有設定 animation-delay 跟 第一格關鍵影格的話，看起來會跟 none 的效果一樣。
+        animation-fill-mode: backwards;
+    }
+}

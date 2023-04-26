@@ -1,0 +1,46 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 1.6rem;
+    line-height: 1.7;
+    color: $color-gray;
+    padding: 3rem;
+
+    box-sizing: border-box;
+}
+
+
+.heading {
+    color: $color-white;
+    text-transform: uppercase;
+
+    // 背面是否可視 backface-visibility: hidden;⇒解決元素晃動
+    backface-visibility: hidden;
+
+    margin-bottom: 6rem;
+
+    .heading-main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        // animation-iteration-count 動畫播放次數
+        // animation-delay 動畫延遲播放時間
+        // animation-direction 動畫播放方向
+
+    }
+
+    .heading-sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.4rem;
+
+        animation-name: moveInRight;
+        animation-duration: 1s;
+    }
+}
