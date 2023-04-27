@@ -2,8 +2,8 @@
 @import "./abstracts/mixin";
 @import "./abstracts/variable";
 
-@import "./base/animation";
 @import "./base/base";
+@import "./base/animation";
 @import "./base/typography";
 @import "./base/utilities";
 
@@ -12,6 +12,7 @@
 @import "./components/button";
 
 @import "./layout/header";
+@import "./layout/grid";
 
 // color l-g:#7ed56f m-g:#55c57a d-g:#28b485
 
